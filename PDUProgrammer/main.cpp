@@ -123,12 +123,11 @@ int main()
     printf("Verifying PDO Number... Set: "); 
     printf("%f", setPdoNum);
     printf(", Read: "); 
-    printf("%f", readPdoNum);
+    printf("%f\n", readPdoNum);
     if (readPdoNum != setPdoNum) {
-        printf("  MISMATCH!");
+        printf("  MISMATCH!\n");
         verificationFailed = true;
     }
-    printf("\n");
   
     // --- Verify PDO 2 Settings ---
     // NOTE: Assumes getVoltage() and getCurrent() functions exist!
@@ -138,22 +137,20 @@ int main()
     printf("Verifying PDO2 Voltage... Set: "); 
     printf("%.1f", setPdo2Voltage);
     printf(", Read: "); 
-    printf("%.1f", readPdo2Voltage);
+    printf("%.1f\n", readPdo2Voltage);
      if (!floatsAreClose(readPdo2Voltage, setPdo2Voltage)) {
-        printf("  MISMATCH!");
+        printf("  MISMATCH!\n");
         verificationFailed = true;
     }
-    printf("\n");
   
     printf("Verifying PDO2 Current... Set: "); 
     printf("%.1f", setPdo2Current);
     printf(", Read: "); 
-    printf("%.1f", readPdo2Current);
+    printf("%.1f\n", readPdo2Current);
     if (!floatsAreClose(readPdo2Current, setPdo2Current)) {
-        printf("  MISMATCH!");
+        printf("  MISMATCH!\n");
         verificationFailed = true;
     }
-    printf("\n");
   
     // --- Verify PDO 3 Settings ---
     float readPdo3Voltage = usb.getVoltage(3);
@@ -162,22 +159,20 @@ int main()
     printf("Verifying PDO3 Voltage... Set: "); 
     printf("%.1f", setPdo3Voltage);
     printf(", Read: "); 
-    printf("%.1f", readPdo3Voltage);
+    printf("%.1f\n", readPdo3Voltage);
      if (!floatsAreClose(readPdo3Voltage, setPdo3Voltage)) {
-        printf("  MISMATCH!");
+        printf("  MISMATCH!\n");
         verificationFailed = true;
     }
-    printf("\n");
   
     printf("Verifying PDO3 Current... Set: "); 
     printf("%.1f", setPdo3Current);
     printf(", Read: ");
-    printf("%.1f", readPdo3Current);
+    printf("%.1f\n", readPdo3Current);
      if (!floatsAreClose(readPdo3Current, setPdo3Current)) {
-        printf("  MISMATCH!");
+        printf("  MISMATCH!\n");
         verificationFailed = true;
     }
-    printf("\n");
   
     // Add more checks if needed
   
